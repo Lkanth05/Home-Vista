@@ -1,0 +1,10 @@
+.agent-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.06);
+}
+.agent-card {
+  max-width: 260px;
+}

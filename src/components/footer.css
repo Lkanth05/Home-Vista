@@ -1,0 +1,223 @@
+.site-footer {
+  /* classy dark background */
+  background: linear-gradient(180deg, #071226, #0b1220);
+  color: #dbeafe; /* light tone for footer text */
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: 36px;
+  padding-top: 28px;
+}
+
+/* Grid layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 18px 16px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-col {
+  min-width: 0;
+}
+
+/* Brand & about */
+.footer-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: #e6f3ff;
+  margin-bottom: 8px;
+}
+.logo-mark {
+  color: #a7c7ff;
+  flex-shrink: 0;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+.brand-title {
+  font-weight: 800;
+  color: #ffffff;
+}
+.brand-sub {
+  font-size: 12px;
+  color: rgba(219, 234, 254, 0.85);
+}
+
+.footer-desc {
+  margin: 6px 0 12px;
+  color: rgba(219, 234, 254, 0.9);
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+/* Social links */
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(219, 234, 254, 0.92);
+  text-decoration: none;
+  transition: transform 150ms ease, background 150ms ease, color 150ms ease;
+}
+.social-link:hover,
+.social-link:focus {
+  transform: translateY(-4px);
+  color: white;
+  background: linear-gradient(90deg, #3690ff, #7c3aed);
+  outline: none;
+}
+
+/* Column titles and lists */
+.col-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #f8fafc;
+}
+.links ul,
+.support ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.links a,
+.support a {
+  color: rgba(219, 234, 254, 0.9);
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+.links a:hover,
+.support a:hover {
+  color: #a7c7ff;
+}
+
+/* Subscribe form */
+.subscribe-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  align-items: center;
+}
+.subscribe-form input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
+  color: #e6f3ff;
+  min-width: 0;
+  flex: 1;
+}
+.subscribe-form input::placeholder {
+  color: rgba(219, 234, 254, 0.6);
+}
+.subscribe-form .btn {
+  white-space: nowrap;
+}
+
+/* Office column */
+.office-info {
+  font-style: normal;
+  color: rgba(219, 234, 254, 0.9);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+.office-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.office-link {
+  color: rgba(219, 234, 254, 0.9);
+  text-decoration: none;
+}
+.office-link:hover {
+  color: #a7c7ff;
+}
+.hours-title {
+  margin-top: 6px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: 18px;
+  padding: 12px 0;
+  background: transparent;
+}
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.bottom-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: rgba(219, 234, 254, 0.8);
+}
+.bottom-links a {
+  color: rgba(219, 234, 254, 0.8);
+  text-decoration: none;
+}
+.bottom-links a:hover {
+  color: #a7c7ff;
+}
+
+/* Small utility */
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* Responsive: 2 columns on medium screens, 4 columns on desktop */
+@media (min-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 320px 1fr 320px 320px;
+    align-items: start;
+  }
+
+  .footer-desc {
+    max-width: 320px;
+  }
+  .subscribe-form {
+    max-width: 320px;
+  }
+}
