@@ -1,13 +1,11 @@
 .site-footer {
-  /* classy dark background */
   background: linear-gradient(180deg, #071226, #0b1220);
-  color: #dbeafe; /* light tone for footer text */
+  color: #dbeafe;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   margin-top: 36px;
   padding-top: 28px;
 }
 
-/* Grid layout */
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -22,7 +20,6 @@
   min-width: 0;
 }
 
-/* Brand & about */
 .footer-brand {
   display: flex;
   gap: 12px;
@@ -31,20 +28,24 @@
   color: #e6f3ff;
   margin-bottom: 8px;
 }
+
 .logo-mark {
   color: #a7c7ff;
   flex-shrink: 0;
 }
+
 .brand-text {
   display: flex;
   flex-direction: column;
 }
+
 .brand-title {
   font-weight: 800;
   color: #ffffff;
 }
+
 .brand-sub {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: rgba(219, 234, 254, 0.85);
 }
 
@@ -52,15 +53,16 @@
   margin: 6px 0 12px;
   color: rgba(219, 234, 254, 0.9);
   line-height: 1.45;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-/* Social links */
 .socials {
   display: flex;
   gap: 10px;
   margin-top: 6px;
+  flex-wrap: wrap;
 }
+
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -73,6 +75,7 @@
   text-decoration: none;
   transition: transform 150ms ease, background 150ms ease, color 150ms ease;
 }
+
 .social-link:hover,
 .social-link:focus {
   transform: translateY(-4px);
@@ -81,12 +84,12 @@
   outline: none;
 }
 
-/* Column titles and lists */
 .col-title {
   font-weight: 700;
   margin-bottom: 8px;
   color: #f8fafc;
 }
+
 .links ul,
 .support ul {
   list-style: none;
@@ -95,24 +98,27 @@
   display: grid;
   gap: 8px;
 }
+
 .links a,
 .support a {
   color: rgba(219, 234, 254, 0.9);
   text-decoration: none;
   transition: color 120ms ease;
 }
+
 .links a:hover,
 .support a:hover {
   color: #a7c7ff;
 }
 
-/* Subscribe form */
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
   align-items: center;
 }
+
 .subscribe-form input {
   padding: 10px 12px;
   border-radius: 10px;
@@ -120,35 +126,41 @@
   background: rgba(255, 255, 255, 0.02);
   color: #e6f3ff;
   min-width: 0;
-  flex: 1;
+  flex: 1 1 200px;
 }
+
 .subscribe-form input::placeholder {
   color: rgba(219, 234, 254, 0.6);
 }
+
 .subscribe-form .btn {
   white-space: nowrap;
+  flex: 0 0 auto;
 }
 
-/* Office column */
 .office-info {
   font-style: normal;
   color: rgba(219, 234, 254, 0.9);
   line-height: 1.45;
   margin-bottom: 8px;
 }
+
 .office-contact {
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin-bottom: 10px;
 }
+
 .office-link {
   color: rgba(219, 234, 254, 0.9);
   text-decoration: none;
 }
+
 .office-link:hover {
   color: #a7c7ff;
 }
+
 .hours-title {
   margin-top: 6px;
   margin-bottom: 4px;
@@ -156,37 +168,42 @@
   color: #f8fafc;
 }
 
-/* Footer bottom */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   margin-top: 18px;
   padding: 12px 0;
   background: transparent;
 }
+
 .footer-bottom-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 12px;
+  align-items: center;
+  text-align: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 16px;
 }
+
 .bottom-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+  justify-content: center;
   color: rgba(219, 234, 254, 0.8);
 }
+
 .bottom-links a {
   color: rgba(219, 234, 254, 0.8);
   text-decoration: none;
 }
+
 .bottom-links a:hover {
   color: #a7c7ff;
 }
 
-/* Small utility */
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -201,22 +218,29 @@
   white-space: nowrap !important;
 }
 
-/* Responsive: 2 columns on medium screens, 4 columns on desktop */
+@media (min-width: 640px) {
+  .footer-bottom-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
 @media (min-width: 720px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
   .footer-grid {
     grid-template-columns: 320px 1fr 320px 320px;
-    align-items: start;
   }
 
   .footer-desc {
     max-width: 320px;
   }
+
   .subscribe-form {
     max-width: 320px;
   }

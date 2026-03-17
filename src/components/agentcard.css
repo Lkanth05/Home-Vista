@@ -1,10 +1,30 @@
+/* Agent.css - Mobile-first responsive styles */
+
 .agent-avatar {
-  width: 56px;
-  height: 56px;
+  /* Fluid sizing: minimum 48px on small phones, preferred 56px, maximum 64px on large screens */
+  width: clamp(48px, 8vw, 64px);
+  height: clamp(48px, 8vw, 64px);
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 6px 16px rgba(16, 24, 40, 0.06);
 }
+
 .agent-card {
+  /* Card takes full width of its container on mobile, capped at 260px for larger screens */
+  width: 100%;
   max-width: 260px;
+  margin: 0 auto; /* Center card if container is wider */
+}
+
+/* Optional: Fine-tune for larger screens */
+@media (min-width: 768px) {
+  .agent-avatar {
+    /* Slightly larger on tablets and desktops if desired, but clamp already handles it */
+    border-radius: 16px; /* Slightly more rounded on larger screens */
+  }
+  
+  .agent-card {
+    /* If cards are in a grid, you might want to remove auto margins */
+    margin: 0; /* Reset centering when multiple cards are side-by-side */
+  }
 }

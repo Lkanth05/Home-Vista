@@ -1,2 +1,33 @@
-.hero { padding: 16px; }
-.hero-inner img { box-shadow: var(--shadow); }
+.hero {
+    padding: clamp(1rem, 5vw, 2rem);
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .hero-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero {
+      padding: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero {
+      padding: 3rem;
+    }
+  }
