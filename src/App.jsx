@@ -14,7 +14,7 @@ export default function App() {
       <Header />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Home-Vista" element={<Home />} />
           <Route path="/listings" element={<Listings />} />
           <Route path="/property/:id" element={<Property />} />
           <Route path="/about" element={<About />} />
