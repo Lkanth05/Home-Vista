@@ -67,7 +67,7 @@ export default function Header() {
   const navLinks = (
     <>
       <NavLink
-        to="/"
+        to="/Home-Vista"
         end
         className={({ isActive }) =>
           isActive ? 'nav-link active' : 'nav-link'
@@ -96,7 +96,7 @@ export default function Header() {
     <header className={`site-header ${visible ? 'visible' : 'hidden'}`}>
       <div className="header-inner container">
         <div className="brand">
-          <Link to="/" className="logo">
+          <Link to="/Home-Vista" className="logo">
             {/* Added Material-UI HomeIcon next to the text */}
             <HomeIcon fontSize="large" sx={{ mr: 0.5 }} />
             HomeVista
@@ -132,7 +132,7 @@ export default function Header() {
               <ListItem disablePadding>
                 <ListItemButton
                   component={NavLink}
-                  to="/"
+                  to="/Home-Vista"
                   end
                   onClick={handleDrawerToggle}
                 >
